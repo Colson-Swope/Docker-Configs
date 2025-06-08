@@ -1,13 +1,8 @@
-version: '3.8'
-
 services:
   ubuntu_redteam:
-    image: ubuntu:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
     container_name: ubuntu_redteam
-    volumes: 
-      - /home/colsons/Documents/docker/ubuntu_redteam:/home/sysadmin/shared
     tty: true
     stdin_open: true
-    build:
-      context: . 
-      dockerfile: Dockerfile
